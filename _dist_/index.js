@@ -1,6 +1,37 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
+const maximun = 122;
+const minimun = 1;
 
-console.log('Happy hacking :)')
+const random = () => Math.floor(Math.random() * (maximun - minimun)) + minimun;
+
+
+const createImageNode = () => {
+    const container = document.createElement('div');
+    container.className = 'p-4';
+
+    const image = document.createElement('img');
+    image.className = 'mx-auto';
+    image.width = '320';
+    image.src = `https://randomfox.ca/images/${random()}.jpg`;
+    
+    container.appendChild(image);
+
+    return container;
+};
+
+
+
+const mountNode = document.getElementById('images');
+
+
+
+const addButton = document.getElementById('add');
+
+const addImage = () => {
+    const newImage = createImageNode();
+    mountNode.append(newImage);
+};
+
+addButton.addEventListener('click', addImage);
+
+
+
