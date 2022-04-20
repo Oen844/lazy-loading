@@ -31,7 +31,7 @@ const addImage = () => {
 };
 
 const cleanImage = () => {
-  mountNode.innerHTML = "";
+  mountNode.innerHTML = " ";
 };
 
 addButton.addEventListener("click", addImage);
