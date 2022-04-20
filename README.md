@@ -80,3 +80,12 @@ Your app is ready to be deployed!
 ### Q: What about Eject?
 
 No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+
+## Screenshots
+
+![App Screenshot](https://i.imgur.com/QYyQZsJ.png)
+
+## Deploy in github-pages
+
+ - [Link a la web](https://oen844.github.io/lazy-loading/)
+
