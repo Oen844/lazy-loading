@@ -7,7 +7,8 @@ const random = () => Math.floor(Math.random() * (maximun - minimun)) + minimun;
 
 const createImageNode = () => {
   const container = document.createElement("div");
-  container.className = "p-4";
+  container.className = "p-4 box-grey";
+  
 
   const image = document.createElement("img");
   image.className = "mx-auto";
