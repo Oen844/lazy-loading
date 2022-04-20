@@ -5,36 +5,35 @@ const minimun = 1;
 
 const random = () => Math.floor(Math.random() * (maximun - minimun)) + minimun;
 
-
 const createImageNode = () => {
-    const container = document.createElement('div');
-    container.className = 'p-4';
+  const container = document.createElement("div");
+  container.className = "p-4";
 
-    const image = document.createElement('img');
-    image.className = 'mx-auto';
-    image.width = '320';
-    image.dataset.src = `https://randomfox.ca/images/${random()}.jpg`;
-    
-    container.appendChild(image);
+  const image = document.createElement("img");
+  image.className = "mx-auto";
+  image.width = "320";
+  image.dataset.src = `https://randomfox.ca/images/${random()}.jpg`;
 
-    return container;
+  container.appendChild(image);
+
+  return container;
 };
 
+const mountNode = document.getElementById("images");
 
-
-const mountNode = document.getElementById('images');
-
-
-
-const addButton = document.getElementById('add');
+const addButton = document.getElementById("add");
+const cleanButton = document.getElementById("clean");
 
 const addImage = () => {
-    const newImage = createImageNode();
-    mountNode.append(newImage);
-    registerImage(newImage);
+  const newImage = createImageNode();
+  mountNode.append(newImage);
+  registerImage(newImage);
 };
 
-addButton.addEventListener('click', addImage);
+const cleanImage = () => {
+  mountNode.innerHTML = "";
+};
 
+addButton.addEventListener("click", addImage);
 
-
+cleanButton.addEventListener("click", cleanImage);
