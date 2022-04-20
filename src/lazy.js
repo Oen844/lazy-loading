@@ -2,15 +2,24 @@ const isIntersecting = (entry) => {
     return entry.isIntersecting;    //true if inside viewport
 }
 
-const action = (entry)=>{
-    const nodo = entry.target;
-    console.log('holis');
+const loadImage = (entry)=>{
+    const container = entry.target;
+    const image = container.firstChild;
+    const url = image.dataset.src;
 
-    observer.unobserve(nodo);
+    image.src = url;
+
+    
+    
+    
+
+    // image.src = `https://randomfox.ca/images/${random()}.jpg`;
+
+    observer.unobserve(container);
 }
 
 const observer = new IntersectionObserver((entries)=>{
-    entries.filter(isIntersecting).forEach(action)
+    entries.filter(isIntersecting).forEach(loadImage)
 });
 
 export const registerImage = (image) => {
