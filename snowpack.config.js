@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'http://oen844.github.io/lazy-loading/',
+    baseUrl: 'https://oen844.github.io/lazy-loading/',
   },
 }
